@@ -1,0 +1,36 @@
+.header {
+  padding-top: 3px;
+  background-color: var(--color-black);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    font-family: "Space Mono";
+    font-weight: 700;
+    font-style: italic;
+    font-size: 30px;
+    letter-spacing: -0.05em;
+    color: var(--color-white);
+  }
+
+  &__contact {}
+}
+
+.logo {}
+
+.contact {
+  padding-top: 7px;
+  text-align: right;
+  color: var(--color-white);
+
+  &__text {
+    margin-bottom: 8px;
+  }
+
+  &__email {}
+}
+
+.email {}
