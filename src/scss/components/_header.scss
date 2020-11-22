@@ -1,6 +1,10 @@
 .header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
   padding-top: 3px;
-  background-color: var(--color-black);
+  background-color: transparent;
 
   &__container {
     display: flex;
