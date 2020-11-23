@@ -12,6 +12,7 @@
   }
 
   &__logo {
+    z-index: 100;
     font-family: "Space Mono";
     font-weight: 700;
     font-style: italic;
@@ -22,6 +23,7 @@
 }
 
 .contact {
+  z-index: 100;
   padding-top: 7px;
   text-align: right;
   color: var(--color-white);
