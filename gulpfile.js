@@ -62,6 +62,12 @@ const imgToApp = () => {
     .pipe(dest('./app/img'))
 }
 
+const videoToApp = () => {
+  return src(['./src/video/**.mp4'])
+
+    .pipe(dest('./app/video'))
+}
+
 const htmlInclude = () => {
   return src(['./src/*.html'])
     .pipe(fileinclude({
@@ -220,6 +226,7 @@ const watchFiles = () => {
   watch('./src/img/**.jpeg', imgToApp);
   watch('./src/img/**.png', imgToApp);
   watch('./src/img/svg/**.svg', svgSprites);
+  watch('./src/video/**.mp4', videoToApp);
   watch('./src/fonts/**', fonts);
   watch('./src/fonts/**', fontsStyle);
 }
@@ -235,7 +242,7 @@ exports.watchFiles = watchFiles;
 exports.fonts = fonts;
 exports.fontsStyle = fontsStyle;
 
-exports.default = series(clean, parallel(htmlInclude, scripts, fonts, resources, imgToApp, svgSprites), fontsStyle, styles, watchFiles);
+exports.default = series(clean, parallel(htmlInclude, scripts, fonts, resources, imgToApp, videoToApp, svgSprites), fontsStyle, styles, watchFiles);
 
 // BUILD
 // const tinypng = () => {
@@ -328,7 +335,7 @@ const rewrite = () => {
 
 exports.cache = series(cache, rewrite);
 
-exports.build = series(clean, parallel(htmlInclude, scriptsBuild, fonts, resources, imgToApp, svgSprites), fontsStyle, stylesBuild);
+exports.build = series(clean, parallel(htmlInclude, scriptsBuild, fonts, resources, imgToApp, videoToApp, svgSprites), fontsStyle, stylesBuild);
 
 
 // deploy
