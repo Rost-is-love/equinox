@@ -61,6 +61,8 @@
   }
 
   &__icon {
+    width: 24px;
+    height: 54px;
     fill: var(--color-white);
     transition: transform 0.2s ease-in-out, fill 0.2s ease-in-out;
   }
