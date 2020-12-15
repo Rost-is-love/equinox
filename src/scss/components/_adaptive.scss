@@ -15,6 +15,16 @@
       line-height: 24px;
     }
   }
+
+  .divinest-light {
+    &__link {
+      border-radius: 11px;
+      width: 262px;
+      height: 52px;
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
 }
 
 @include tablet {
@@ -38,6 +48,26 @@
     margin-bottom: 130px;
     font-size: 16px;
   }
+
+  .divinest-light {
+    &__dsr {
+      padding-bottom: 40px;
+    }
+
+    &__title {
+      margin-bottom: 10px;
+    }
+
+    &__text {
+      max-width: 470px;
+      font-size: 16px;
+      line-height: 24px;
+
+      &:not(:last-child) {
+        margin-bottom: 27px;
+      }
+    }
+  }
 }
 
 @include tablet-small {
@@ -54,6 +84,16 @@
 
     &__descr {
       max-width: 400px;
+    }
+  }
+
+  .divinest-light {
+    &__link {
+      bottom: -10%;
+      width: 212px;
+      height: 48px;
+      font-size: 12px;
+      line-height: 12px;
     }
   }
 }
@@ -77,11 +117,47 @@
   }
 
   .to-projects {
-    margin-bottom: 60px;
+    margin-bottom: 90px;
     font-size: 12px;
 
     &__icon {
       height: 34px;
+    }
+  }
+
+  .divinest-light {
+    &__bg {
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    &__video {
+      width: auto;
+      height: 566px;
+    }
+
+    &__link {
+      bottom: -5px;
+      margin-bottom: 0;
+    }
+
+    &__dsr {
+      padding-top: 10px;
+    }
+
+    &__title {
+      font-size: 24px;
+    }
+
+    &__text {
+      hyphens: none;
+      padding: 0 20px;
+      font-size: 12px;
+      line-height: 18px;
+
+      &:not(:last-child) {
+        margin-bottom: 27px;
+      }
     }
   }
 }
