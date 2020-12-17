@@ -1,0 +1,104 @@
+.game-popup {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: -100vh;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  // background-color: rgba($color: #000, $alpha: 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: bottom 0.5s;
+
+  &__body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    padding-top: 120px;
+    width: 920px;
+    height: 460px;
+    background-color: var(--color-white);
+  }
+
+  &__close {
+    @include btn-reset;
+
+    position: absolute;
+    right: 50px;
+    top: 30px;
+    width: 40px;
+    height: 40px;
+  }
+
+  &__close span {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: #b5b5b5;
+    transform: translateY(-50%);
+  }
+
+  &__close span:first-child {
+    transform: rotate(45deg);
+  }
+
+  &__close span:last-child {
+    transform: rotate(-45deg);
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-family: "Space Mono Normal";
+    font-weight: 700;
+    font-size: 60px;
+    text-transform: uppercase;
+  }
+
+  &__links {
+    display: flex;
+  }
+}
+
+.popup-open {
+  bottom: 0;
+  opacity: 1;
+  visibility: visible;
+  transition: bottom 0.5s;
+}
+
+.first-popup {}
+
+.first-poup {
+
+  &__body {}
+}
+
+.android-link {
+  margin-right: 20px;
+  width: 356px;
+  height: 105px;
+  background-image: url(../../img/android-icon.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.astrofall-android-link {}
+
+.ios-link {
+  width: 316px;
+  height: 105px;
+  background-image: url(../../img/ios-icon.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.astrofall-ios-link {}

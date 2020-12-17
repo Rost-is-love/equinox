@@ -134,6 +134,16 @@
     &__video {
       width: auto;
       height: 566px;
+
+      &--desk {
+        display: none;
+        opacity: 0;
+      }
+
+      &--mob {
+        display: block;
+        opacity: 1;
+      }
     }
 
     &__link {
