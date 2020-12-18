@@ -1,5 +1,14 @@
 @include desktop {
+  .container {
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+
   .first {
+    &__container {
+      padding-top: 30vh;
+    }
+
     &__info {
       max-width: 950px;
     }
@@ -23,6 +32,51 @@
       height: 52px;
       font-size: 16px;
       line-height: 16px;
+    }
+  }
+
+  .mobile-projects {
+    margin-bottom: 70px;
+    padding-top: 25px;
+  }
+
+  .game {
+    &__text {
+      padding-top: 20px;
+    }
+
+    &__title {
+      margin-bottom: 10px;
+    }
+
+    &__dsr {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  .last-game {
+    &__body {
+      flex-wrap: wrap;
+    }
+
+    &__bg {
+      width: 74.3%;
+    }
+
+    &__text {
+      margin-left: 0;
+    }
+
+    &__title {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    &__dsr {
+      width: 455px;
+      font-size: 16px;
+      line-height: 24px;
     }
   }
 }
@@ -51,6 +105,7 @@
 
   .divinest-light {
     &__dsr {
+      padding-top: 20px;
       padding-bottom: 40px;
     }
 
@@ -64,8 +119,42 @@
       line-height: 24px;
 
       &:not(:last-child) {
-        margin-bottom: 27px;
+        margin-bottom: 20px;
       }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    padding: 0 30px;
+  }
+
+  .first {
+    &__container {
+      padding-top: 30vh;
+    }
+  }
+
+  .game {
+    &__title {
+      font-size: 24px;
+    }
+
+    &__dsr {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+
+  .last-game {
+    &__title {
+      font-size: 24px;
+    }
+
+    &__dsr {
+      font-size: 12px;
+      line-height: 18px;
     }
   }
 }
@@ -96,10 +185,48 @@
       line-height: 12px;
     }
   }
+
+  .mobile-projects {
+    flex-wrap: wrap;
+  }
+
+  .game {
+    width: 48%;
+
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+
+    &:first-child {
+      margin-bottom: 40px;
+    }
+
+    &:nth-child(2) {
+      margin-bottom: 40px;
+    }
+  }
+
+  .last-game {
+    &__bg {
+      width: 100%;
+    }
+
+    &__dsr {
+      width: 100%;
+    }
+  }
 }
 
 @include mobile {
+  .container {
+    padding: 0 25px;
+  }
+
   .first {
+    &__container {
+      padding-top: 30vh;
+    }
+
     &__info {
       max-width: 310px;
     }
@@ -160,14 +287,30 @@
     }
 
     &__text {
-      hyphens: none;
       padding: 0 20px;
       font-size: 12px;
       line-height: 18px;
+      hyphens: none;
 
       &:not(:last-child) {
         margin-bottom: 27px;
       }
+    }
+  }
+
+  .mobile-projects {
+    margin-bottom: 60px;
+  }
+
+  .game {
+    &__text {
+      padding-top: 10px;
+    }
+  }
+
+  .last-game {
+    &__title {
+      margin-top: 10px;
     }
   }
 }
