@@ -158,6 +158,48 @@
       }
     }
   }
+
+  .game-popup {
+
+    &__body {
+      border-radius: 30px;
+      padding-top: 70px;
+      width: 520px;
+      height: 300px;
+    }
+
+    &__close {
+      position: absolute;
+      right: 40px;
+      top: 25px;
+      width: 40px;
+      height: 40px;
+    }
+
+    &__close span {
+      width: 40px;
+      height: 2px;
+    }
+
+    &__title {
+      margin-bottom: 20px;
+      font-family: "Space Mono Normal";
+      font-weight: 700;
+      font-size: 30px;
+      text-transform: uppercase;
+    }
+  }
+
+  .android-link {
+    margin-right: 20px;
+    width: 237px;
+    height: 70px;
+  }
+
+  .ios-link {
+    width: 210px;
+    height: 70px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -404,5 +446,43 @@
     &__title {
       margin-top: 10px;
     }
+  }
+
+  .game-popup {
+
+    &__body {
+      border-radius: 0;
+      padding-top: 120px;
+      width: 100%;
+      height: 250px;
+    }
+
+    &__close {
+      position: absolute;
+      right: 20px;
+      top: 25px;
+      width: 40px;
+      height: 40px;
+    }
+
+    &__close span {
+      width: 40px;
+      height: 2px;
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+  }
+
+  .android-link {
+    margin-right: 10px;
+    width: 105px;
+    height: 30px;
+  }
+
+  .ios-link {
+    width: 90px;
+    height: 30px;
   }
 }
