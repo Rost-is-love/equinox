@@ -2,19 +2,21 @@
   position: fixed;
   left: 0;
   right: 0;
-  bottom: -100vh;
+  bottom: 0;
   z-index: 999;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 100vh;
+  background-color: rgba($color: #000840, $alpha: 0.5);
   opacity: 0;
   visibility: hidden;
-  transition: bottom 0.5s;
+  transition: opacity 0.5s, visibility 0.5s;
 
   &__body {
     position: relative;
+    bottom: -100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,6 +25,7 @@
     width: 920px;
     height: 460px;
     background-color: var(--color-white);
+    transition: bottom 0.5s;
   }
 
   &__close {
@@ -68,9 +71,13 @@
 }
 
 .popup-open {
-  bottom: 0;
   opacity: 1;
   visibility: visible;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+.body-popup-open {
+  bottom: 0;
   transition: bottom 0.5s;
 }
 

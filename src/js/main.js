@@ -10,20 +10,28 @@ const astrofall = document.querySelector('.first-game__link');
 const spacetor = document.querySelector('.second-game__link');
 const hayseed = document.querySelector('.third-game__link');
 const astrofallPopup = document.querySelector('.first-popup');
+const astrofallPopupBody = document.querySelector('.first-popup__body');
 const spacetorPopup = document.querySelector('.second-popup');
+const spacetorPopupBody = document.querySelector('.second-popup__body');
 const hayseedPopup = document.querySelector('.third-popup'); 
+const hayseedPopupBody = document.querySelector('.third-popup__body'); 
 const gamePopup = document.querySelectorAll('.game-popup');
+const popupBody = document.querySelectorAll('.game-popup__body');
 const closePopup = document.querySelectorAll('.game-popup__close');
 const body = document.body;
 
 const popupWork = () => {
-  const addPopup = (popup) => {
-    popup.classList.add('popup-open');       
+  const addPopup = (popup, popupBody) => {
+    popup.classList.add('popup-open');   
+    popupBody.classList.add('body-popup-open');      
   }
 
   const removePopup = () => {
     gamePopup.forEach((e) => {
       e.classList.remove('popup-open');   
+    })  
+    popupBody.forEach((e) => {
+      e.classList.remove('body-popup-open');   
     })     
   }
 
@@ -39,24 +47,24 @@ const popupWork = () => {
   }
 
   astrofall.addEventListener('click', () => {
-    addPopup(astrofallPopup);
+    addPopup(astrofallPopup, astrofallPopupBody);
     disableScroll();
   });
 
   spacetor.addEventListener('click', () => {
-    addPopup(spacetorPopup);
+    addPopup(spacetorPopup, spacetorPopupBody);
     disableScroll();
   });
 
   hayseed.addEventListener('click', () => {
-    addPopup(hayseedPopup);
+    addPopup(hayseedPopup, hayseedPopupBody);
     disableScroll();
   });
 
   closePopup.forEach((el) => {
     el.addEventListener('click', () => {
       removePopup();
-      enableScroll();
+      setTimeout(enableScroll, 500);
     });
   });
 
@@ -64,7 +72,7 @@ const popupWork = () => {
     el.addEventListener('click', (e) => {
       if (e.target === el) {
         removePopup(el);
-        enableScroll();
+        setTimeout(enableScroll, 500);
       }
     });
   });
