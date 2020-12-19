@@ -136,6 +136,14 @@
   .to-projects {
     margin-bottom: 130px;
     font-size: 16px;
+
+    &:hover {
+      color: var(--color-white);
+    }
+
+    &:hover .to-projects__icon {
+      fill: var(--color-white);
+    }
   }
 
   .divinest-light {
@@ -155,6 +163,29 @@
 
       &:not(:last-child) {
         margin-bottom: 20px;
+      }
+    }
+
+    &__link {
+      &:hover {
+        color: var(--color-white);
+        background-color: var(--color-purple);
+      }
+    }
+  }
+
+  .game {
+    &__link {
+      &:hover .game__title {
+        color: var(--color-white);
+      }
+    }
+  }
+
+  .last-game {
+    &__link {
+      &:hover .last-game__title {
+        color: var(--color-white);
       }
     }
   }
@@ -199,6 +230,20 @@
   .ios-link {
     width: 210px;
     height: 70px;
+  }
+
+  .email {
+    &:hover {
+      color: var(--color-white);
+    }
+  }
+
+  .media {
+    &__img {
+      &:hover {
+        fill: var(--color-purple);
+      }
+    }
   }
 }
 
