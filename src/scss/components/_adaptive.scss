@@ -532,3 +532,12 @@
     height: 30px;
   }
 }
+
+@media (max-height: 576px) and (orientation: landscape) {
+  .first {
+    &__container {
+      padding-top: 10vh;
+      min-height: 550px;
+    }
+  }
+}
