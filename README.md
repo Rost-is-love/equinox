@@ -1,3 +1,3 @@
 # Сайт геймдев-студии EquinoX
 
-![Image alt](https://github.com/Rost-is-love/DripMill/raw/master//src/video/equinox.mp4)
+![Image alt](https://telegra.ph/file/faced3d5f64176b58ba7b.jpg)
